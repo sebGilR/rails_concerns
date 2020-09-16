@@ -1,0 +1,16 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-sm-offset-4 col-sm-4 col-xs-12">
+      <%= form_for @twit, :url => {:controller => "twits", :action => "update" } do |f| %>
+        <div class="form-group">
+          <%= f.label :tweet %>
+          <%= f.text_field :tweet, class: "form-control" %>
+        </div>
+        <div class="form-group">
+          <%= f.submit "Update", class: "btn btn-primary" %>
+          <%= link_to "Cancel", :back, class: "btn btn-default" %>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>
